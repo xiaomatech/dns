@@ -2,7 +2,7 @@
 
 - 使用
 ```
-  yum install -y dnsmasq ntp
+  yum install -y dnsmasq ntp ntpdate
   
   wget https://codeload.github.com/xiaomatech/dns/zip/master -O dns-master.zip
   
@@ -20,7 +20,8 @@
   
   #ntp
   mv dns-master/ntp.conf /etc/ntp.conf
-  
+  cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+  ntpdate 1.cn.pool.ntp.org && hwclock -w
   service ntpd restart
   
 ```
