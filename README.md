@@ -13,7 +13,7 @@
   #dns dhcp
   mv dns-master/dnsmasq.conf /etc/dnsmasq.conf
   mv dns-master/dhcp.conf /etc/dnsmasq.d/dhcp.conf
-  mv dns-master/dhcp.conf /etc/dnsmasq.d/dns.conf
+  mv dns-master/dns.conf /etc/dnsmasq.d/dns.conf
   mv dns-master/resolv.conf /etc/resolv.conf
   
   service dnsmasq restart
